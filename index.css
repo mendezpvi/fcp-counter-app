@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  margin: 0;
+  display: grid;
+  place-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: #060716;
+  background: url(./train-station.avif) no-repeat center/cover;
+}
+
+main {
+  padding: 2rem;
+  inline-size: 25rem;
+  text-align: center;
+  background-color: #06071640;
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px #f5f5f540;
+  color: #fff;
+
+  & h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-shadow: 0 0 2px black;
+  }
+  & p:is(:not(#save-el)) {
+    margin: 0;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-shadow: 0 0 2px black;
+  }
+  & div {
+    margin-top: 1.5rem;
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    & button {
+      inline-size: 13rem;
+      padding-block: .5rem;
+      font-family: inherit;
+      font-size: 1.3rem;
+      font-weight: bolder;
+      text-transform: uppercase;
+      background-color: darkred;
+      color: whitesmoke;
+      border: none;
+      border-radius: 8px;
+    }
+    & button:is(:not(:first-of-type)) {
+      background-color: darkgreen;
+    }
+  }
+  & p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-shadow: 0 0 3px black;
+  }
+}
